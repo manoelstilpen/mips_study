@@ -8,10 +8,10 @@ quant: .word 50
 .globl main
 main:
 	move $s0, $gp	# initial point to save array 1
-	li $v0, 5		# read integer
-	syscall
-	move $s3, $v0
-	#lw $s3, quant	# saves array dimension
+	#li $v0, 5		# read integer
+	#syscall
+	#move $s3, $v0
+	lw $s3, quant	# saves array dimension
 
 	mult $s3, $s3	# get numbers of elements in array
 	mflo $s4
@@ -175,6 +175,5 @@ exit:
 
 
 	
-
 
 
